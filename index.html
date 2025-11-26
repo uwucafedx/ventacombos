@@ -1,96 +1,52 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Combos y Cajas</title>
+body {
+    font-family: Arial, sans-serif;
+    background: #000000;
+    padding: 20px;
+}
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #000000;
-            padding: 20px;
-            color: #000000;
-        }
-        .card {
-            background: linear-gradient(135deg, #d9b3ff, #ffb6dd);
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-            max-width: 400px;
-            margin: auto;
-            text-align: center;
-            color: #000000;
-        }
-        input {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            color: #000000;
-        }
-        input::placeholder {
-            color: #000000;
-        }
-        button {
-            width: 100%;
-            padding: 10px;
-            background: #8a5cff;
-            color: #000000;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background: #7448d8;
-        }
-        .result {
-            margin-top: 15px;
-            font-weight: bold;
-            font-size: 18px;
-            color: #000000;
-        }
-        label {
-            display: block;
-            margin-top: 10px;
-            color: #000000;
-        }
-        .logo {
-            width: 120px;
-            margin-bottom: 15px;
-        }
-    </style>
-</head>
-<body>
-    <div class="card">
-        <img src="logo.png" alt="Logo" class="logo">
-        <h2>Calculadora de Venta</h2>
-        <label>Combos vendidos (70 c/u):</label>
-        <input type="number" id="combos" placeholder="Cantidad de combos">
+.card {
+    background: linear-gradient(135deg, #d9b3ff, #ffb6dd);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.20);
+    max-width: 380px;
+    margin: auto;
+    text-align: center;
+}
 
-        <label>Cajas vendidas (3 cajas = 450):</label>
-        <input type="number" id="cajas" placeholder="Cantidad de cajas (múltiplo de 3)">
+.logo {
+    width: 110px;
+    margin-bottom: 15px;
+}
 
-        <button onclick="calcular()">Calcular total</button>
+h2 {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
 
-        <div class="result" id="resultado"></div>
-    </div>
+label {
+    display: block;
+    margin: 12px 0 5px 0;
+    font-weight: bold;
+    color: #ffffff;
+}
 
-    <script>
-        function calcular() {
-            const combos = parseInt(document.getElementById('combos').value) || 0;
-            const cajas = parseInt(document.getElementById('cajas').value) || 0;
+input {
+    width: 90%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 0 4px rgba(255,255,255,0.4);
+    font-size: 15px;
+    transition: 0.2s;
+}
 
-            const totalCombos = combos * 70;
-            const totalCajas = (cajas / 3) * 450;
+input:focus {
+    box-shadow: 0 0 8px rgba(255,255,255,0.9);
+}
 
-            const total = totalCombos + totalCajas;
-
-            document.getElementById('resultado').innerText =
-                `Total a cobrar: $${total}`;
-        }
-    </script>
-</body>
-</html>
+button {
+    width: 90%;
+    p
